@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material de Apoio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6e6e6;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #e6e6e6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode header {
+            background-color: #555;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav ul li {
+            border: 1px solid #333;
+            padding: 10px 10px;
+            border-radius: 5px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        body.dark-mode header nav ul li a {
+            color: #e6e6e6;
+        }
+
+        /* Apostilas Section */
+        .apostilas-gallery {
+            padding: 50px;
+            text-align: center;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode .apostilas-gallery {
+            background-color: #444;
+        }
+
+        .apostilas-gallery h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .apostilas-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .apostila-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 30%;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode .apostila-card {
+            background-color: #555;
+            border: 1px solid #666;
+        }
+
+        .apostila-card h3 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .apostila-card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+            margin-top: 10px;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .apostila-card p {
+            color: #ccc;
+        }
+
+        .download-button {
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .download-button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode footer {
+            background-color: #555;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #777;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode footer p {
+            color: #ccc;
+        }
+
+        /* Button style */
+        .toggle-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 5px;
+        }
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px; /* Mover para a esquerda */
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Inicialmente oculto */
+            transition: background-color 0.3s;
+        }
+
+        .scroll-top:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">STUDY HUB</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="material.html">Material de apoio</a></li>
+                <li><a href="planner.html">Planners</a></li>
+                <li><a href="app.html">Aplicativos</a></li>
+                <li><a href="video.html">Vídeos</a></li>
+                <li><a href="canais.html">Canais</a></li>
+                <li><a href="dicas1.html">Dicas</a></li>
+                <li><a href="etec.html">Etec em Ação</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Apostilas Section -->
+    <section class="apostilas-gallery">
+        <h1>Apostilas de Apoio</h1>
+        <div class="apostilas-container">
+            <!-- Apostila 1 -->
+            <div class="apostila-card">
+                <h3>Apostila de Matemática</h3>
+                <p>Apostila abrangendo tópicos fundamentais de matemática, incluindo exercícios e soluções.</p><br>
+                <a href="apostilas/apostilamate1.pdf" target="new" class="download-button">Download</a>
+            </div>
+            <!-- Apostila 2 -->
+            <div class="apostila-card">
+                <h3>Apostila de Português</h3>
+                <p>Apostila que aborda gramática, redação e interpretação de textos.</p><br>
+                <a href="apostilas/apostilaport1.pdf" target="new" class="download-button">Download</a>
+            </div>
+            <!-- Apostila 3 -->
+            <div class="apostila-card">
+                <h3>Apostila de História</h3>
+                <p>Apostila sobre os principais eventos históricos e suas implicações.</p><br>
+                <a href="apostilas/apostilahist1.pdf" target="new" class="download-button">Download</a>
+            </div>
+            <!-- Apostila 4 -->
+            <div class="apostila-card">
+                <h3>Apostila de Geografia</h3>
+                <p>Apostila que explora os aspectos físicos e humanos da geografia.</p><br>
+                <a href="apostilas/apostilageo1.pdf" target="new" class="download-button">Download</a>
+            </div>
+             <!-- Apostila 8 -->
+        <div class="apostila-card">
+            <h3>Apostila de Biologia</h3>
+            <p>Apostila que desvenda os processos vitais e a interconexão entre os organismos e o meio ambiente.</p><br>
+            <a href="apostilas/apostilabio1.pdf" target="new" class="download-button">Download</a>
+        </div>
+            <!-- Apostila 5 -->
+            <div class="apostila-card">
+                <h3>Apostila de Física</h3>
+                <p>Apostila que aborda os princípios fundamentais da física e suas aplicações no mundo moderno.</p><br>
+                <a href="apostilas/apostilafis1.pdf" target="new" class="download-button">Download</a>
+            </div>
+             <!-- Apostila 6 -->
+             <div class="apostila-card">
+                <h3>Apostila de Química</h3>
+                <p>Apostila que desmistifica as reações químicas e as transformações da matéria no cotidiano.</p><br>
+                <a href="apostilas/apostilaquim1.pdf" target="new" class="download-button">Download</a>
+             </div>
+            <!-- Apostila 7 -->
+            <div class="apostila-card">
+                <h3>Apostila de Inglês</h3>
+                <p>Apostila de vocabulário, gramática e exercícios práticos de inglês.</p><br>
+                <a href="apostilas/apostilaing1.pdf" target="new" class="download-button">Download</a>
+            </div>
+        <!-- Apostila 8 -->
+        <div class="apostila-card">
+           <h3>Apostila de Filosofia</h3>
+           <p>Apostila que investiga os conceitos filosóficos essenciais e seus reflexos no pensamento humano.</p><br>
+           <a href="apostilas/apostilafilo1.pdf" target="new" class="download-button">Download</a>
+       </div>
+        <!-- Apostila 8 -->
+        <div class="apostila-card">
+            <h3>Apostila de Sociologia</h3>
+            <p>Apostila que analisa as dinâmicas sociais e os impactos das estruturas de poder nas sociedades contemporâneas.</p><br>
+            <a href="apostilas/apostilasocio1.pdf" target="new" class="download-button">Download</a>
+        </div>
+        <div class="apostila-card">
+            <h3>Apostila de Artes</h3>
+            <p>Apostila que explora as manifestações artísticas e suas influências na cultura e na expressão humana.</p><br>
+            <a href="apostilas/apostilaartes1.pdf" target="new" class="download-button">Download</a>
+        </div>
+        <div class="apostila-card">
+            <h3>Apostila de Ed. Física</h3>
+            <p>Apostila que explora os fundamentos da Educação Física, promovendo a saúde e o bem-estar por meio do movimento e da prática esportiva.</p><br>
+            <a href="apostilas/apostilaedf1.pdf.crdownload" target="new" class="download-button">Download</a>
+        </div>
+        </div>
+    </section>
+
+    
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+    <footer>
+        <p>&copy; Study Hub 2024.
+            <br> Todos os direitos reservados para o grupo.
+            <br> Trabalho acadêmico sem fins lucrativos.</p>
+    </footer>
+
+    <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="toggleMode()">Alterar Modo</button>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+<button class="scroll-top" id="scrollTopBtn">Voltar ao Topo</button>
+     <script>
+        // Obtenha o botão
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        // Mostre o botão quando a página for rolada para baixo
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Quando o botão for clicado, role suavemente para o topo da página
+        scrollTopBtn.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+
+</body>
+</html>

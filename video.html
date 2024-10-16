@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6e6e6;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #e6e6e6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode header {
+            background-color: #555;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav ul li {
+            border: 1px solid #333;
+            padding: 10px 10px;
+            border-radius: 5px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        body.dark-mode header nav ul li a {
+            color: #e6e6e6;
+        }
+
+        /* Video Gallery Section */
+        .video-gallery {
+            padding: 50px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        body.dark-mode .video-gallery {
+            background-color: #444;
+        }
+
+        .video-gallery h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .video-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 30%;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode .video-card {
+            background-color: #555;
+        }
+
+        .video-card img, .video-card iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .video-card h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .video-card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 5px; /* Reduzi o espaçamento superior */
+        }
+
+        body.dark-mode .video-card p {
+            color: #e6e6e6; /* Texto claro no modo escuro */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode footer {
+            background-color: #555;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #777;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode footer p {
+            color: #ccc;
+        }
+
+        /* Button style */
+        .toggle-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 5px;
+        }
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px; /* Mover para a esquerda */
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Inicialmente oculto */
+            transition: background-color 0.3s;
+        }
+
+        .scroll-top:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">STUDY HUB</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="material.html">Material de apoio</a></li>
+                <li><a href="planner.html">Planners</a></li>
+                <li><a href="app.html">Aplicativos</a></li>
+                <li><a href="video.html">Vídeos</a></li>
+                <li><a href="canais.html">Canais</a></li>
+                <li><a href="dicas1.html">Dicas</a></li>
+                <li><a href="etec.html">Etec em Ação</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Video Gallery Section -->
+    <section class="video-gallery">
+        <h1>Vídeos em destaques</h1>
+        <div class="video-container">
+            <!-- Video 1 -->
+            <div class="video-card">
+                <img src="imagens/figurasdelinguagem.jpeg" alt="Imagem de prévia do vídeo 1">
+                <h3>Português</h3>
+                <p>FIGURAS DE LINGUAGEM PARA O ENEM | QUER QUE DESENHE?</p>
+                <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                    <a href="https://youtu.be/xfjSzZf6JA4?si=mlohN9qPVz632Ak0" target="new" style="color: white; text-decoration: none;">Visualizar</a>
+                </button>
+            </div>
+            <!-- Video 2 -->
+            <div class="video-card">
+                <img src="imagens/analisesintatica.jpeg" alt="Imagem de prévia do vídeo 1">
+                <h3>Português</h3>
+                <p>Análise Sintática [Prof Noslen]       </p><br>
+               
+    
+                <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                    <a href="https://youtu.be/ZR_Ou01WsK0?si=FHKBi6hClDne8Ken" target="new" style="color: white; text-decoration: none;">Visualizar</a>
+                </button>
+            </div>
+            <!-- Video 3 -->
+            <div class="video-card">
+                <img src="imagens/razaoeproporcao.jpeg" alt="Imagem de prévia do vídeo 1">
+                <h3>Matemática</h3>
+                <p>FÁCIL e RÁPIDO I RAZÃO E PROPORÇÃO</p>
+                <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                    <a href="https://youtu.be/bM9v6Bgp8qM?si=U1bZWxRKOZ1PNM_h" target="new" style="color: white; text-decoration: none;">Visualizar</a>
+                </button>
+            </div>
+            <!-- Video 4 -->
+            <div class="video-card">
+                <img src="imagens/funcao.jpeg" alt="Imagem de prévia do vídeo 1">
+                <h3>Matemática</h3>
+                <p>FUNÇÃO DO 1 GRAU | FUNÇÃO AFIM | \Prof. Gis/- AULA 1</p>
+                <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                    <a href="https://youtu.be/KbvcwmMnv7c?si=N5iOpcU9LYhlb0vY" target="new" style="color: white; text-decoration: none;">Visualizar</a>
+                </button>
+            </div>
+            <!-- Video 5 -->
+            <div class="video-card">
+                <img src="imagens/leisdenewton.jpeg" alt="Imagem de prévia do vídeo 1">
+                <h3>Física</h3>
+                <p>Física - Leis de Newton</p>
+                <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                    <a href="https://youtu.be/dU14qCv5AuI?si=QTNlB0BRZW49RsYM" target="new" style="color: white; text-decoration: none;">Visualizar</a>
+                </button>
+            </div>
+            <!-- Video 6 -->
+            <div class="video-card">
+                <img src="imagens/movimentouniforme.jpeg" alt="Imagem de prévia do vídeo 1">
+                <h3>Física</h3>
+                <p>MOVIMENTO UNIFORME - FÍSICA BÁSICA (FÍSICA do ZERO) - Teoria e Exercícios - AULA 01</p>
+                <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                    <a href="https://youtu.be/g61dy6E8JNo?si=Av1FPVFYJFZM-GAt" target="new" style="color: white; text-decoration: none;">Visualizar</a>
+                </button>
+            </div>
+            <!-- Video 7 -->
+            <div class="video-card">
+                <img src="imagens/misturas.jpeg" alt="Imagem de prévia do vídeo 1">
+                <h3>Química</h3>
+                <p>SEPARAÇÃO DE MISTURAS - TUDO O QUE VOCÊ PRECISA SABER</p>
+                <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                    <a href="https://youtu.be/oCI-07oGg_s?si=fSjLIVCygFN7ETE7" target="new" style="color: white; text-decoration: none;">Visualizar</a>
+                </button>
+            </div>
+            <!-- Video 8 -->
+            <div class="video-card">
+                <img src="imagens/esquiometria.jpeg" alt="Imagem de prévia do vídeo 1">
+                <h3>Química</h3>
+                <p>Estequiometria Básica - Passo a Passo!</p>
+                <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                    <a href="https://youtu.be/lHaNpSqdabs?si=-XagASi3FzW3lbRQ" target="new" style="color: white; text-decoration: none;">Visualizar</a>
+                </button>
+            </div>
+            <!-- Video 9 -->
+            <div class="video-card">
+                <img src="imagens/guerra.jpeg" alt="Imagem de prévia do vídeo 1">
+                <h3>História</h3>
+                <p>PRIMEIRA GUERRA MUNDIAL: RESUMO | HISTÓRIA | QUER QUE DESENHE?</p>
+                <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                    <a href="https://youtu.be/6P89N-WrnLk?si=VfcymRbJYdbMUbRZ" target="new" style="color: white; text-decoration: none;">Visualizar</a>
+                </button>
+            </div>
+            <!-- Video 10 -->
+            <div class="video-card">
+                <img src="imagens/vargas.jpeg" alt="Imagem de prévia do vídeo 1">
+                <h3>História</h3>
+                <p>TUDO QUE VOCÊ PRECISA SABER SOBRE A ERA VARGAS: tá longo, mas vale a pena! (Débora Aladim)</p>
+                <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                    <a href="https://youtu.be/jQU6Ojetq8M?si=ExLHeV1wncN4I0tU" target="new" style="color: white; text-decoration: none;">Visualizar</a>
+                </button>
+            </div>
+            <!-- Video 11 -->
+            <div class="video-card">
+                <img src="imagens/globalização.jpeg" alt="Imagem de prévia do vídeo 1">
+                <h3>Geografia</h3>
+                <p>O que é Globalização?</p>
+                <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                    <a href="https://youtu.be/CpkjTkCFOjQ?si=tgQ0ffQnPvr7bejJ" target="new" style="color: white; text-decoration: none;">Visualizar</a>
+                </button>
+            </div>
+            <!-- Video 12 -->
+            <div class="video-card">
+                <img src="imagens/climas.jpeg" alt="Imagem de prévia do vídeo 1">
+                <h3>Geografia</h3>
+                <p>Climas do Brasil - Geobrasil</p>
+                <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                    <a href="https://youtu.be/zd8R5BLWjyM?si=BiSXVjbShXbj2z6F" target="new" style="color: white; text-decoration: none;">Visualizar</a>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    <footer>
+        <p>&copy; Study Hub 2024.<br> Todos os direitos reservados para o grupo.<br> Trabalho acadêmico sem fins lucrativos.</p>
+    </footer>
+    <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="toggleMode()">Alterar Modo</button>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+<button class="scroll-top" id="scrollTopBtn">Voltar ao Topo</button>
+     <script>
+        // Obtenha o botão
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        // Mostre o botão quando a página for rolada para baixo
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Quando o botão for clicado, role suavemente para o topo da página
+        scrollTopBtn.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+
+</body>
+</html>

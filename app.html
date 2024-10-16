@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6e6e6;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #e6e6e6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode header {
+            background-color: #555;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav ul li {
+            border: 1px solid #333;
+            padding: 10px 10px;
+            border-radius: 5px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        body.dark-mode header nav ul li a {
+            color: #e6e6e6;
+        }
+
+        /* App Section */
+        .apps-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .app-section {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 23%;
+            margin-bottom: 20px;
+            transition: background-color 0.3s, color 0.3s; /* Transição suave */
+        }
+
+        body.dark-mode .app-section {
+            background-color: #444; /* Cor de fundo para o modo escuro */
+            color: #e6e6e6; /* Cor do texto para o modo escuro */
+        }
+
+        .app-section img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+
+        .app-section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .app-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .app-section a {
+            text-decoration: none;
+            color: white;
+            background-color: #000000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .app-section a:hover {
+            background-color: #000000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode footer {
+            background-color: #555;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #777;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode footer p {
+            color: #ccc;
+        }
+
+        /* Button style */
+        .toggle-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 5px;
+        }
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px; /* Mover para a esquerda */
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Inicialmente oculto */
+            transition: background-color 0.3s;
+        }
+
+        .scroll-top:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">STUDY HUB</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="material.html">Material de apoio</a></li>
+                <li><a href="planner.html">Planners</a></li>
+                <li><a href="app.html">Aplicativos</a></li>
+                <li><a href="video.html">Vídeos</a></li>
+                <li><a href="canais.html">Canais</a></li>
+                <li><a href="dicas1.html">Dicas</a></li>
+                <li><a href="etec.html">Etec em Ação</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="apps-container">
+        <div class="app-section">
+            <img src="imagens/anki.png" alt="Anki">
+            <h2>Anki</h2>
+            <p>Um aplicativo de flashcards que utiliza a técnica de repetição espaçada, ideal para memorizar informações.</p>
+            <p><a href="https://play.google.com/store/apps/details?id=com.ichi2.anki&hl=pt_BR" target="new">Baixe agora! &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/quiz.png" alt="Quiz">
+            <h2>Quizlet</h2>
+            <p>Permite criar flashcards, quizzes e jogos para revisar conteúdos de forma interativa.</p>
+            <p><a href="https://play.google.com/store/apps/details?id=com.quizlet.quizletandroid&hl=pt_BR" target="new">Baixe agora! &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/evernote.png" alt="Evernote">
+            <h2>Evernote</h2>
+            <p>Organizar notas, adicionar imagens, documentos e gravar áudio. Ideal para manter tudo em um só lugar.</p>
+            <p><a href="https://play.google.com/store/apps/details?id=com.evernote&hl=pt_BR" target="new">Baixe agora! &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/trello.png" alt="Trello">
+            <h2>Trello</h2>
+            <p>Uma ferramenta de gerenciamento de projetos que pode ser usada para organizar tarefas e planos de estudo.</p>
+            <p><a href="https://play.google.com/store/apps/details?id=com.trello&hl=en" target="new">Baixe agora! &raquo;</a></p>
+        </div>
+        <!-- Outros aplicativos -->
+        <div class="app-section">
+            <img src="imagens/notion.png" alt="Notion">
+            <h2>Notion</h2>
+            <p>Um aplicativo versátil para tomar notas, organizar informações e até criar bancos de dados personalizados para seus estudos.</p>
+            <p><a href="https://play.google.com/store/apps/details?id=notion.id&hl=pt_BR" target="new">Baixe agora! &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/forest.png" alt="Forest">
+            <h2>Forest</h2>
+            <p>Ajuda a manter o foco. Ao iniciar uma sessão de estudo, você planta uma árvore virtual que cresce enquanto você se mantém concentrado.</p>
+            <p><a href="https://play.google.com/store/apps/details?id=cc.forestapp&hl=pt_BR" target="new">Baixe agora! &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/khan.png" alt="KhanAcademy">
+            <h2>KhanAcademy</h2>
+            <p>Plataforma educacional gratuita com cursos em diversas disciplinas, oferecendo vídeos e exercícios interativos para aprendizado no próprio ritmo.</p>
+            <p><a href="https://play.google.com/store/apps/details?id=org.khanacademy.android&hl=pt_BR" target="new">Baixe agora! &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/coursera.png" alt="Coursera">
+            <h2>Coursera</h2>
+            <p>Plataforma de cursos online que colabora com universidades e organizações para oferecer cursos gratuitos e pagos, incluindo certificados ao final.</p>
+            <p><a href="https://play.google.com/store/apps/details?id=org.coursera.android&hl=pt_BR" target="new">Baixe agora! &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/drive.png" alt="Drive">
+            <h2>Drive</h2>
+            <p> O Google Drive é um armazenamento em nuvem que permite acesso remoto a documentos, colaboração em tempo real e integração com outras ferramentas do Google.endo ótimo para estudantes.</p>
+            <p><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs&hl=pt_BR" target="new">Baixe agora! &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/note.png" alt="OneNote">
+            <h2>Microsoft OneNote</h2>
+            <p>É um aplicativo de anotações que organiza informações em cadernos e seções. Permite inserir textos, imagens e desenhos. Com recursos de pesquisa e tags, é ideal para estudantes.</p>
+            <p><a href="https://play.google.com/store/apps/details?id=com.microsoft.office.onenote&hl=pt_BR" target="new">Baixe agora! &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/pomodoro.png" alt="Pomodoro">
+            <h2>Pomodoro Timer</h2>
+            <p>Ajudam a gerenciar o tempo de estudo. Eles usam a técnica Pomodoro, que consiste em estudar por 25 minutos e fazer uma pausa de 5 minutos, ajudando a manter a concentração.</p>
+            <p><a href="https://play.google.com/store/apps/details?id=com.pomodrone.app&hl=pt_BR" target="new">Baixe agora! &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/socratic.png" alt="Socratic">
+            <h2>Socratic</h2>
+            <p>O Socratic é um aplicativo que usa inteligência artificial para ajudar a responder perguntas de matemática, ciências e outros tópicos. O app fornece explicações e recursos para melhor entendimento.</p>
+            <p><a href="https://play.google.com/store/apps/details?id=com.mohit.ingenium.tca239&hl=pt_BR" target="new">Baixe agora! &raquo;</a></p>
+        </div>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    <footer>
+        <p>&copy; Study Hub 2024.
+            <br> Todos os direitos reservados para o grupo.
+            <br> Trabalho acadêmico sem fins lucrativos.</p>
+    </footer>
+
+    <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="toggleMode()">Alterar Modo</button>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+<button class="scroll-top" id="scrollTopBtn">Voltar ao Topo</button>
+     <script>
+        // Obtenha o botão
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        // Mostre o botão quando a página for rolada para baixo
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Quando o botão for clicado, role suavemente para o topo da página
+        scrollTopBtn.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+</body>
+</html>

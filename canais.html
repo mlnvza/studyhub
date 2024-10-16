@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canais</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6e6e6;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #e6e6e6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode header {
+            background-color: #555;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav ul li {
+            border: 1px solid #333;
+            padding: 10px 10px;
+            border-radius: 5px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        body.dark-mode header nav ul li a {
+            color: #e6e6e6;
+        }
+
+        /* App Section */
+        .apps-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .app-section {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 23%;
+            margin-bottom: 20px;
+            transition: background-color 0.3s, color 0.3s; /* Transição suave */
+        }
+
+        body.dark-mode .app-section {
+            background-color: #444; /* Cor de fundo para o modo escuro */
+            color: #e6e6e6; /* Cor do texto para o modo escuro */
+        }
+
+        .app-section img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+
+        .app-section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .app-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .app-section a {
+            text-decoration: none;
+            color: white;
+            background-color: #000000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .app-section a:hover {
+            background-color: #000000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode footer {
+            background-color: #555;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #777;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode footer p {
+            color: #ccc;
+        }
+
+        /* Button style */
+        .toggle-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 5px;
+        }
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px; /* Mover para a esquerda */
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Inicialmente oculto */
+            transition: background-color 0.3s;
+        }
+
+        .scroll-top:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">STUDY HUB</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="material.html">Material de apoio</a></li>
+                <li><a href="planner.html">Planners</a></li>
+                <li><a href="app.html">Aplicativos</a></li>
+                <li><a href="video.html">Vídeos</a></li>
+                <li><a href="canais.html">Canais</a></li>
+                <li><a href="dicas1.html">Dicas</a></li>
+                <li><a href="etec.html">Etec em Ação</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="apps-container">
+        <div class="app-section">
+            <img src="imagens/1.png">
+            <h2>Matemática</h2>
+            <p>Gis com Giz Matemática</p>
+            <p><a href="https://www.youtube.com/@Giscomgiz" target="new">Acesse &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/2.png">
+            <h2>Português</h2>
+            <p>Professor Noslen</p>
+            <p><a href="https://www.youtube.com/@ProfessorNoslen" target="new">Acesse &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/5.png">
+            <h2>História</h2>
+            <p>Débora Aladim</p>
+            <p><a href="https://www.youtube.com/@deboraaladim" target="new">Acesse &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/7.png">
+            <h2>Geografia</h2>
+            <p>Geobrasil</p>
+            <p><a href="https://www.youtube.com/@Geobrasil" target="new">Acesse &raquo;</a></p>
+        </div>
+        <!-- Outros aplicativos -->
+        <div class="app-section">
+            <img src="imagens/9.png">
+            <h2>Biologia</h2>
+            <p>Biologia com Samuel Cunha</p>
+            <p><a href="https://www.youtube.com/@professorsamuelcunha" target="new">Acesse &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/10.png">
+            <h2>Física</h2>
+            <p>Davi Oliveira - Física 2.0</p>
+            <p><a href="https://www.youtube.com/@Fisica2.0" target="new">Acesse&raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/11.png">
+            <h2>Química</h2>
+            <p>Professor Gabriel Cabral</p>
+            <p><a href="https://www.youtube.com/@ProfessorGabrielCabral" target="new">Acesse &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/12.png">
+            <h2>Inglês</h2>
+            <p>Teacher Elza</p>
+            <p><a href="https://www.youtube.com/@TeacherElza" target="new">Acesse &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/8.png">
+            <h2>Filosofia</h2>
+            <p>Escola de Filosofia</p>
+            <p><a href="https://www.youtube.com/@escoladefilosofiaYT" target="new">Acesse &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/6.png">
+            <h2>Geral</h2>
+            <p>Descomplica</p>
+            <p><a href="https://www.youtube.com/@descomplica" target="new">Acesse &raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/3.png">
+            <h2>Geral</h2>
+            <p>Toda Matéria</p>
+            <p><a href="https://www.youtube.com/@TodaMateriaOficial" target="new">Acesse&raquo;</a></p>
+        </div>
+        <div class="app-section">
+            <img src="imagens/4.png">
+            <h2>Geral</h2>
+            <p>Curso Enem Gratuito</p>
+            <p><a href="https://www.youtube.com/@CursoEnemGratuito" target="new">Acesse &raquo;</a></p>
+        </div>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    <footer>
+        <p>&copy; Study Hub 2024.
+            <br> Todos os direitos reservados para o grupo.
+            <br> Trabalho acadêmico sem fins lucrativos.</p>
+    </footer>
+
+    <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="toggleMode()">Alterar Modo</button>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+<button class="scroll-top" id="scrollTopBtn">Voltar ao Topo</button>
+     <script>
+        // Obtenha o botão
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        // Mostre o botão quando a página for rolada para baixo
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Quando o botão for clicado, role suavemente para o topo da página
+        scrollTopBtn.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+</body>
+</html>

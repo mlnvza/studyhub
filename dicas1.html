@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6e6e6;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s; /* Transição suave */
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #e6e6e6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode header {
+            background-color: #555;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav ul li {
+            border: 1px solid #333;
+            padding: 10px 10px;
+            border-radius: 5px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s; /* Transição suave para a cor do texto */
+        }
+
+        body.dark-mode header nav ul li a {
+            color: #e6e6e6; /* Cor do texto no modo escuro */
+        }
+
+        /* Study Tips Section */
+        .study-tips {
+            padding: 50px;
+            text-align: center;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s; /* Transição suave */
+        }
+
+        body.dark-mode .study-tips {
+            background-color: #444; /* Cor de fundo no modo escuro */
+        }
+
+        .study-tips h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .tips-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .tip-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 30%;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s; /* Transição suave */
+        }
+
+        body.dark-mode .tip-card {
+            background-color: #555;
+            border: 1px solid #666;
+            color: #e6e6e6; /* Cor do texto das cartas no modo escuro */
+        }
+
+        .tip-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .tip-card p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        body.dark-mode .tip-card p {
+            color: #ccc; /* Cor do texto no modo escuro */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+        }
+
+        body.dark-mode footer {
+            background-color: #555; /* Cor do rodapé no modo escuro */
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        body.dark-mode footer p {
+            color: #ccc; /* Cor do texto no rodapé no modo escuro */
+        }
+
+        /* Toggle Button */
+        .toggle-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 5px;
+        }
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px; /* Mover para a esquerda */
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Inicialmente oculto */
+            transition: background-color 0.3s;
+        }
+
+        .scroll-top:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">STUDY HUB</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="material.html">Material de apoio</a></li>
+                <li><a href="planner.html">Planners</a></li>
+                <li><a href="app.html">Aplicativos</a></li>
+                <li><a href="video.html">Vídeos</a></li>
+                <li><a href="canais.html">Canais</a></li>
+                <li><a href="dicas1.html">Dicas</a></li>
+                <li><a href="etec.html">Etec em Ação</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Study Tips Section -->
+    <section class="study-tips">
+        <h1>Principais dicas de estudo para um melhor aprendizado</h1>
+        <div class="tips-container">
+            <!-- Tip 1 -->
+            <div class="tip-card">
+                <h3>1. Crie um Cronograma</h3>
+                <p>Organize suas sessões de estudo com horários fixos para cada matéria, evitando a procrastinação.</p>
+            </div>
+            <!-- Tip 2 -->
+            <div class="tip-card">
+                <h3>2. Estude em Blocos</h3>
+                <p>Use a técnica Pomodoro: estude por 25 minutos e faça uma pausa de 5 minutos. Isso ajuda a manter a concentração.</p>
+            </div>
+            <!-- Tip 3 -->
+            <div class="tip-card">
+                <h3>3. Ambiente Organizado</h3>
+                <p>Escolha um local tranquilo, bem iluminado e livre de distrações para estudar.</p>
+            </div>
+            <!-- Tip 4 -->
+            <div class="tip-card">
+                <h3>4. Resumos e Mapas Mentais</h3>
+                <p>Faça resumos ou mapas mentais dos conteúdos. Isso ajuda a fixar a informação de maneira visual.</p>
+            </div>
+            <!-- Tip 5 -->
+            <div class="tip-card">
+                <h3>5. Exercícios Práticos</h3>
+                <p>Resolva exercícios e faça testes sobre o que aprendeu. A prática solidifica o conhecimento.</p>
+            </div>
+            <!-- Tip 6 -->
+            <div class="tip-card">
+                <h3>6. Explique para Alguém</h3>
+                <p>Tente explicar o que aprendeu para outra pessoa. Isso ajuda a identificar lacunas no seu entendimento.</p>
+            </div>
+            <!-- Tip 7 -->
+            <div class="tip-card">
+                <h3>7. Faça Pausas</h3>
+                <p>Após períodos de estudo intenso, faça pausas curtas (5-10 minutos) a cada 25-30 minutos. Isso aumenta a concentração.</p>
+            </div>
+            <!-- Tip 8 -->
+            <div class="tip-card">
+                <h3>8. Mantenha-se Hidratado e Alimentado</h3>
+                <p>Beber água e comer lanches saudáveis podem aumentar sua energia e foco.</p>
+            </div>
+            <!-- Tip 9 -->
+            <div class="tip-card">
+                <h3>9. Estude com Amigos</h3>
+                <p>Grupos de estudo podem ajudar na troca de ideias e na resolução de dúvidas.</p>
+            </div>
+             <!-- Tip 10 -->
+             <div class="tip-card">
+                <h3>10. Revisão Regular</h3>
+                <p>Faça revisões periódicas do que já estudou. Isso ajuda a transferir o conhecimento para a memória de longo prazo.</p>
+            </div>
+            <!-- Tip 11 -->
+            <div class="tip-card">
+                <h3>11. Use Recursos Diversos</h3>
+                <p>Além de livros, use vídeos, podcasts, aplicativos e plataformas online para diversificar o aprendizado.</p>
+            </div>
+            <!-- Tip 12 -->
+            <div class="tip-card">
+                <h3>12. Durma Bem</h3>
+                <p>O sono é essencial para a memória e a concentração. Tente ter uma rotina de sono regular.</p>
+            </div>
+            <!-- Tip 13 -->
+            <div class="tip-card">
+                <h3>13. Uso de Aplicativos de Flashcards.</h3>
+                <p>Utilize aplicativos como Anki ou Quizlet para criar flashcards digitais. Eles ajudam a revisar informações de forma interativa e podem ser programados para revisões espaçadas, otimizando a retenção de memória. </p>
+            </div>
+            <!-- Tip 14 -->
+            <div class="tip-card">
+                <h3>14. Desafios de Tempo.</h3>
+                <p>Defina um cronômetro e desafie-se a completar uma tarefa ou revisar um conteúdo em um tempo limitado. Essa abordagem cria um senso de urgência e pode aumentar a produtividade, além de tornar o estudo mais dinâmico e divertido.</p>
+            </div>
+            <!-- Tip 15 -->
+            <div class="tip-card">
+                <h3>15. Método de Feynman</h3>
+                <p> Explicar o que você está aprendendo para si mesmo ajuda a solidificar o conhecimento e a reforçar a compreensão do conteúdo. Essa técnica ativa a memória e melhora a retenção.</p>
+            </div>
+            <!-- Tip 16 -->
+            <div class="tip-card">
+                <h3>16. Estudo ao Inverso</h3>
+                <p>Comece pelas perguntas ou problemas antes de estudar a teoria. Isso cria um contexto para o que você vai aprender.</p>
+            </div>
+            <!-- Tip 17 -->
+            <div class="tip-card">
+                <h3>17. Desafio da Curva de Esquecimento.</h3>
+                <p>Revise o material em intervalos crescentes. Estude logo após aprender, depois um dia depois, uma semana depois e assim por diante.</p>
+            </div>
+              <!-- Tip 18 -->
+              <div class="tip-card">
+                <h3>18.Teste a si mesmo.</h3>
+                <p> Faça testes práticos ou quizzes sobre o que você estudou. Isso não só ajuda a reforçar o aprendizado, mas também a preparar você para situações de avaliação.</p>
+            </div>
+              <!-- Tip 19 -->
+              <div class="tip-card">
+                <h3>19. Técnica Pomodoro.</h3>
+                <p>Estude por 25 minutos e depois faça uma pausa de 5 minutos. Após quatro "Pomodoros", faça uma pausa maior. Isso ajuda a manter a concentração e a evitar a fadiga mental.</p>
+            </div>
+              <!-- Tip 20 -->
+              <div class="tip-card">
+                <h3>20. Usar Recursos Criativo.</h3>
+                <p>Crie histórias, músicas ou rimas para memorizar informações. A criatividade pode facilitar a memorização.</p>
+            </div>
+             <!-- Tip 21 -->
+             <div class="tip-card">
+                <h3>21. identifique seu estilo de aprendizado.</h3>
+                <p>Experimente diferentes métodos (visual, auditivo, cinestésico) e veja qual se adapta melhor a você. Adapte seu estudo com base nisso.</p>
+            </div>
+              
+        </div>
+    </section>
+
+    
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    <footer>
+        <p>&copy; Study Hub 2024.
+            <br> Todos os direitos reservados para o grupo.
+            <br> Trabalho acadêmico sem fins lucrativos.</p>
+    </footer>
+
+    <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="toggleMode()">Alterar Modo</button>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+<button class="scroll-top" id="scrollTopBtn">Voltar ao Topo</button>
+     <script>
+        // Obtenha o botão
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        // Mostre o botão quando a página for rolada para baixo
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Quando o botão for clicado, role suavemente para o topo da página
+        scrollTopBtn.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+
+</body>
+</html>

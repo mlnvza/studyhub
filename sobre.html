@@ -1,0 +1,485 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e6e6e6;
+      color: #333;
+    }
+
+    body.dark-mode {
+            background-color: #333;
+            color: #e6e6e6;
+        }
+
+    h1 {
+      text-align: center;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #f4f4f4;
+    }
+
+    body.dark-mode header {
+            background-color: #555;
+        }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    header nav ul li {
+      border: 1px solid #333;
+      padding: 10px 10px;
+      border-radius: 5px;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+    }
+    body.dark-mode header nav ul li a {
+            color: #e6e6e6;
+        }
+
+        .hero-image {
+    width: 30%; /* Ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Se quiser bordas arredondadas */
+    margin-left: 20px; /* Espaçamento à esquerda */
+    margin-right: 150px; /* Espaçamento à direita */
+}
+
+    
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80vh;
+      padding: 50px;
+      background-color: #e6e6e6;
+    }
+
+    body.dark-mode .hero {
+            background-color: #444;
+        }
+
+    .hero-content {
+      max-width: 45%;
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    body.dark-mode .hero-content p {
+            color: #ccc;
+        }
+
+    .hero-content .btn {
+      background-color: #333;
+      padding: 15px 30px;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .hero-image {
+      width: 45%;
+      height: 400px;
+      border-radius: 10px; /* Borda arredondada */
+    }
+
+    /* Carousel */
+    .carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
+      padding: 50px;
+    }
+
+    .carousel-item {
+      width: 300px;
+      height: 200px;
+      background-color: white;
+      margin: 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 10px; /* Borda arredondada */
+    }
+
+    /* Main Content and Sidebar */
+    .apps-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      gap: 20px; /* Espaço entre as caixas */
+    }
+
+    
+
+    .app-section {
+      flex: 3;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px; /* Borda arredondada */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    body.dark-mode .app-section {
+            background-color: #555;
+        }
+
+    .sidebar {
+      flex: 1;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    body.dark-mode .sidebar {
+            background-color: #555;
+        }
+
+    /* Cards */
+    .cards {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+    body.dark-mode .cards {
+            background-color: #555;
+        }
+
+    .card {
+      flex: 1;
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin: 0 10px;
+      border-radius: 10px; /* Borda arredondada */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    body.dark-mode .card {
+            background-color: #555;
+        }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f4f4;
+      margin-top: 50px;
+    }
+
+    body.dark-mode footer {
+            background-color: #555;
+        }
+
+    footer p {
+      font-size: 14px;
+      color: #777;
+    }
+    body.dark-mode footer p {
+            color: #ccc;
+        }
+    .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px; /* Espaçamento entre as imagens */
+        }
+
+        
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            width: 200px; /* Ajuste o tamanho da imagem */
+            height: 200px; /* Mantenha a altura igual à largura para ficar circular */
+            border-radius: 50%; /* Para deixar a imagem circular */
+            object-fit: cover; /* Para manter a proporção da imagem */
+        }
+
+         /* Button style */
+         .toggle-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 5px;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px; /* Mover para a esquerda */
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Inicialmente oculto */
+            transition: background-color 0.3s;
+        }
+
+        .scroll-top:hover {
+            background-color: #555;
+        }
+        
+        .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    padding: 50px;
+    background-color: #e6e6e6;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .hero {
+    background-color: #444;
+}
+
+.hero-content {
+    max-width: 45%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #555;
+    transition: color 0.3s;
+}
+
+body.dark-mode .hero-content p {
+    color: #ccc;
+}
+
+.hero-image {
+    width: 30%; /* Ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Se quiser bordas arredondadas */
+    margin-left: 20px; /* Espaçamento à esquerda */
+    margin-right: 150px; /* Espaçamento à direita */
+}
+    </style>
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">STUDY HUB</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="material.html">Material de apoio</a></li>
+        <li><a href="planner.html">Planners</a></li>
+        <li><a href="app.html">Aplicativos</a></li>
+        <li><a href="video.html">Vídeos</a></li>
+        <li><a href="canais.html">Canais</a></li>
+        <li><a href="dicas1.html">Dicas</a></li>
+        <li><a href="etec.html">Etec em Ação</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Sobre o site</h1>
+      <p>
+        O site em questão é uma plataforma dedicada à promoção da Educação de Qualidade, alinhada com o Objetivo de Desenvolvimento Sustentável (ODS) 4. Ele oferece uma variedade de recursos para ajudar os alunos a se organizarem melhor em seus estudos. Entre as ferramentas disponíveis, destacam-se calendários acadêmicos, listas de tarefas, materiais de leitura e vídeos educativos.
+        
+        Além disso, o site proporciona dicas de gestão do tempo e técnicas de estudo, visando melhorar a aprendizagem e o desempenho dos alunos. Com um design intuitivo e acessível, a plataforma busca promover a inclusão e garantir que todos tenham acesso a uma educação de qualidade, contribuindo para o desenvolvimento pessoal e profissional dos usuários.</p>
+    </div>
+    <img src="imagens/logo.png" alt="Descrição da imagem" class="hero-image">
+  </section>
+
+ 
+
+  <!-- Main Content and Sidebar -->
+  <div class="apps-container">
+    <div class="app-section">
+      <h2>ODS 4 - Educação de Qualidade</h2><br>
+      <p>O ODS 4, ou Objetivo de Desenvolvimento Sustentável 4, visa garantir uma educação inclusiva, equitativa e de qualidade para todos, ao longo da vida. Esse objetivo busca assegurar que todos os jovens e adultos tenham acesso à educação técnica e profissional, além de promover oportunidades de aprendizagem ao longo da vida. Entre suas metas, destaca-se a necessidade de eliminar disparidades de gênero na educação, garantir que todos tenham acesso à educação pré-escolar e aumentar o número de jovens e adultos com habilidades relevantes para o emprego.</p><br>
+      <p>O ODS 4 também enfatiza a importância de ambientes de aprendizagem seguros, inclusivos e eficazes, e promove o desenvolvimento de habilidades para a cidadania global. A implementação desse objetivo é fundamental para o empoderamento individual e para o desenvolvimento social e econômico das sociedades.</p>
+    </div>
+   
+    <div class="sidebar">
+      <h3>Objetivo 4.1</h3>
+      <p>O Objetivo 4.1 da ODS 4 busca garantir, até 2030, que todos os jovens e a maioria dos adultos tenham acesso a uma educação primária e secundária gratuita e de qualidade. Foca em resultados de aprendizagem essenciais, como leitura, escrita e matemática, promovendo a inclusão e a equidade, especialmente para os mais vulneráveis. Essa meta é crucial para assegurar oportunidades iguais e preparar os indivíduos para a educação ao longo da vida.</p>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
+  <div class="cards">
+    <div class="card">
+      <h3>Projeto Interdisciplinar</h3><br>
+      <p>Na ETEC de Hortolândia, os alunos do 1° ano do curso de Desenvolvimento de Sistemas participaram de um projeto interdisciplinar que consistiu na criação de um site para resolver algum problema identificado na escola. O projeto integrou conhecimentos de três disciplinas essenciais: Análise e Projeto de Sistemas, Banco de Dados e Programação Web.</p><br>
+
+        <p>Os estudantes, inicialmente, analisaram as necessidade existentes na instituição e logo desenvolveram o projeto para a realização do site utilizando os conceitos da disciplina de Análise e Projeto de Sistemas. Em seguida, na aula de Programação Web, desenvolveram a interface do site, criando um ambiente intuitivo e acessível.</p><br>
+        
+        <p>Ao final, o projeto não apenas aplicou conhecimentos teóricos, mas também promoveu habilidades práticas e trabalho em equipe, resultando em um site funcional. Essa experiência destacou a importância da interdisciplinaridade na formação dos futuros profissionais de tecnologia.</p>
+    </div>
+    <div class="card">
+      <h3>Necessidade na ETEC identificada pelo grupo</h3><br>
+      <p>Na ETEC de Hortolândia, nosso grupo identificou uma necessidade significativa: melhorar a organização dos estudantes para mitigar a exaustão causada pela desorganização nos estudos. Muitos alunos enfrentam dificuldades em gerenciar suas atividades, prazos e compromissos, o que resulta em estresse e impacto negativo no aprendizado.</p><br>
+
+       <p> Para solucionar esse problema, nós decidimos criar um site que centralizasse recursos importantes, como dicas de estudos, recomendações de vídeos, materiais de apoio, entre outros.  Essa iniciativa demonstra nosso compromisso como alunos em melhorar o bem-estar de seus colegas, ressaltando a tecnologia como uma aliada na educação.</p>
+    </div>
+   
+  </div>
+
+  <h1 class="h1">Professores Orientadores</h1><br>
+
+  <div class="container">
+    <div class="image-container">
+        <img src="imagens/14.png" alt="Descrição da Imagem 1">
+        <p>Fernanda Hellen de Sousa</p>
+        <p>Análise e Projeto de Sistemas</p>
+    </div>
+    <div class="image-container">
+        <img src="imagens/13.png" alt="Descrição da Imagem 2">
+        <p>Samuel dos Santos</p>
+        <p>Programação Web</p>
+    </div>
+    <div class="image-container">
+        <img src="imagens/15.png" alt="Descrição da Imagem 3">
+        <p>Priscila Batista Martins</p>
+        <p>Banco de Dados</p>
+    </div>
+</div><br>
+
+<h1 class="h1">Nossa Equipe</h1><br>
+<div class="container">
+  <div class="image-container">
+      <img src="imagens/luane.png" alt="Descrição da Imagem 1">
+      <p>Luane Caroline da Silva</p>
+  </div>
+  <div class="image-container">
+      <img src="imagens/milena.png" alt="Descrição da Imagem 2">
+      <p>Milena Vaz de Abreu</p>
+  </div>
+  <div class="image-container">
+      <img src="imagens/perola.png" alt="Descrição da Imagem 3">
+      <p>Pérola Evellyn Daltro Figueiredo</p>
+  </div>
+  <div class="image-container">
+    <img src="imagens/teo.png" alt="Descrição da Imagem 3">
+    <p>Samara Pereira da Silva</p>
+  
+</div>
+</div>
+
+  
+
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Study Hub 2024.
+        <br> Todos os direitos reservados para o grupo.
+        <br> Trabalho acadêmico sem fins lucrativos.</p>
+  </footer>
+  
+    <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="toggleMode()">Alterar Modo</button>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+    <button class="scroll-top" id="scrollTopBtn">Voltar ao Topo</button>
+
+    <script>
+        // Obtenha o botão
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        // Mostre o botão quando a página for rolada para baixo
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Quando o botão for clicado, role suavemente para o topo da página
+        scrollTopBtn.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+
+</body>
+</html>

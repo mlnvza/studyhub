@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planners</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6e6e6;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #e6e6e6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode header {
+            background-color: #555;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav ul li {
+            border: 1px solid #333;
+            padding: 10px 10px;
+            border-radius: 5px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        body.dark-mode header nav ul li a {
+            color: #e6e6e6;
+        }
+
+        /* Video Gallery Section */
+        .video-gallery {
+            padding: 50px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        body.dark-mode .video-gallery {
+            background-color: #444;
+        }
+
+        .video-gallery h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .video-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 30%;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode .video-card {
+            background-color: #555;
+        }
+
+        .video-card img, .video-card iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .video-card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+            transition: background-color 0.3s;
+        }
+
+        body.dark-mode footer {
+            background-color: #555;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #777;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode footer p {
+            color: #ccc;
+        }
+
+        /* Button style */
+        .toggle-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 5px;
+        }
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px; /* Mover para a esquerda */
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Inicialmente oculto */
+            transition: background-color 0.3s;
+        }
+
+        .scroll-top:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">STUDY HUB</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="material.html">Material de apoio</a></li>
+                <li><a href="planner.html">Planners</a></li>
+                <li><a href="app.html">Aplicativos</a></li>
+                <li><a href="video.html">Vídeos</a></li>
+                <li><a href="canais.html">Canais</a></li>
+                <li><a href="dicas1.html">Dicas</a></li>
+                <li><a href="etec.html">Etec em Ação</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Video Gallery Section -->
+<section class="video-gallery">
+    <h1>Planners Mensais</h1>
+    <div class="video-container">
+        <!-- Video 1 -->
+        <div class="video-card">
+            <iframe src="imagens/planner1.pdf"></iframe>
+            <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                <a href="imagens/planner1.pdf" target="new" download="planner1.pdf" style="color: white; text-decoration: none;">
+                    Baixar PDF
+                </a>
+            </button>
+            
+        </div>
+        <!-- Video 2 -->
+        <div class="video-card">
+            <iframe src="imagens/planner2.pdf"></iframe>
+            <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                <a href="imagens/planner2.pdf" target="new" download="planner1.pdf" style="color: white; text-decoration: none;">
+                    Baixar PDF
+                </a>
+            </button>
+            
+        </div>
+        <!-- Video 3 -->
+        <div class="video-card">
+            <iframe src="imagens/planner3.pdf"></iframe>
+            <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                <a href="imagens/planner3.pdf" target="new" download="planner1.pdf" style="color: white; text-decoration: none;">
+                    Baixar PDF
+                </a>
+            </button>
+            
+        </div>
+        <!-- Video 4 -->
+        <div class="video-card">
+            <iframe src="imagens/planner4.pdf"></iframe>
+            <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                <a href="imagens/planner4.pdf" target="new" download="planner1.pdf" style="color: white; text-decoration: none;">
+                    Baixar PDF
+                </a>
+            </button>
+            
+        </div>
+        <!-- Video 5 -->
+        <div class="video-card">
+            <iframe src="imagens/planner5.pdf"></iframe>
+            <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                <a href="imagens/planner5.pdf" target="new" download="planner1.pdf" style="color: white; text-decoration: none;">
+                    Baixar PDF
+                </a>
+            </button>
+            
+        </div>
+        <!-- Video 6 -->
+        <div class="video-card">
+            <iframe src="imagens/planner6.pdf"></iframe>
+            <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                <a href="imagens/planner6.pdf" target="new" download="planner1.pdf" style="color: white; text-decoration: none;">
+                    Baixar PDF
+                </a>
+            </button>
+            
+         </div>
+    </div>
+<p></p>
+       <h1>Planners semanais</h1>
+     <div class="video-container">  
+        <!-- Video 7 -->
+        <div class="video-card">
+            <iframe src="imagens/planner7.pdf"></iframe>
+            <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                <a href="imagens/planner7.pdf" target="new" download="planner1.pdf" style="color: white; text-decoration: none;">
+                    Baixar PDF
+                </a>
+            </button>
+            
+
+                
+        </div>
+        <!-- Video 8 -->
+        <div class="video-card">
+            <iframe src="imagens/planner8.pdf"></iframe>
+            <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                <a href="imagens/planner8.pdf" target="new" download="planner1.pdf" style="color: white; text-decoration: none;">
+                    Baixar PDF
+                </a>
+            </button>
+            
+        </div>
+    
+        <!-- Video 9 -->
+        <div class="video-card">
+            <iframe src="imagens/planner9.pdf"></iframe>
+            <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                <a href="imagens/planner9.pdf" target="new" download="planner1.pdf" style="color: white; text-decoration: none;">
+                    Baixar PDF
+                </a>
+            </button>
+            
+        </div>
+        <!-- Video 9 -->
+        <div class="video-card">
+            <iframe src="imagens/planner10.pdf"></iframe>
+            <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                <a href="imagens/planner10.pdf" target="new" download="planner1.pdf" style="color: white; text-decoration: none;">
+                    Baixar PDF
+                </a>
+            </button>
+            
+        </div>
+        <!-- Video 9 -->
+        <div class="video-card">
+            <iframe src="imagens/planner11.pdf"></iframe>
+            <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                <a href="imagens/planner11.pdf" target="new" download="planner1.pdf" style="color: white; text-decoration: none;">
+                    Baixar PDF
+                </a>
+            </button>
+            
+        </div>
+        <!-- Video 9 -->
+        <div class="video-card">
+            <iframe src="imagens/planner12.pdf"></iframe>
+            <button type="button" style="background-color: #000; color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#000'">
+                <a href="imagens/planner12.pdf" target="new" download="planner1.pdf" style="color: white; text-decoration: none;">
+                    Baixar PDF
+                </a>
+            </button>
+            
+        </div>
+
+    </div>
+    
+</section>
+
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+<footer>
+    <p>&copy; Study Hub 2024.
+        <br> Todos os direitos reservados para o grupo.
+        <br> Trabalho acadêmico sem fins lucrativos.</p>
+</footer>
+
+    <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="toggleMode()">Alterar Modo</button>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+<button class="scroll-top" id="scrollTopBtn">Voltar ao Topo</button>
+     <script>
+        // Obtenha o botão
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        // Mostre o botão quando a página for rolada para baixo
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Quando o botão for clicado, role suavemente para o topo da página
+        scrollTopBtn.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+</body>
+</html>

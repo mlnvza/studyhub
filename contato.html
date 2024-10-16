@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e6e6e6;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: #333;
+      color: #e6e6e6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #f4f4f4;
+      transition: background-color 0.3s;
+    }
+
+    body.dark-mode header {
+      background-color: #555;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    header nav ul li {
+      border: 1px solid #333;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    body.dark-mode header nav ul li {
+      border-color: #e6e6e6;
+    }
+
+    body.dark-mode header nav ul li a {
+      color: #e6e6e6;
+    }
+
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+
+    .member {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, color 0.3s;
+      width: 45%; /* Largura para acomodar dois quadros lado a lado */
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    body.dark-mode .member {
+      background-color: #555;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .member-info {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    .member-info h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .member-info p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    body.dark-mode .member-info p {
+      color: #ccc;
+    }
+
+    .feedback-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode .feedback-container {
+      background-color: #555;
+      color: #e6e6e6;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .feedback-container h2 {
+      margin-bottom: 20px;
+    }
+
+    .feedback-container label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .feedback-container input[type="range"] {
+      width: 100%;
+    }
+
+    .feedback-container textarea {
+      width: 100%;
+      height: 100px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    body.dark-mode .feedback-container textarea {
+      background-color: #555;
+      color: #e6e6e6;
+      border-color: #777;
+    }
+
+    .feedback-container button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    body.dark-mode .feedback-container button {
+      background-color: #555;
+    }
+
+    .feedback-result {
+      margin-top: 20px;
+      background-color: #e6e6e6;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    body.dark-mode .feedback-result {
+      background-color: #444;
+    }
+
+    footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+        }
+
+        body.dark-mode footer {
+            background-color: #555; /* Cor do rodapé no modo escuro */
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        body.dark-mode footer p {
+            color: #ccc; /* Cor do texto no rodapé no modo escuro */
+        }
+
+
+    .toggle-btn {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      border-radius: 5px;
+    }
+
+    body.dark-mode .toggle-btn {
+      background-color: #555;
+    }
+    .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px; /* Mover para a esquerda */
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Inicialmente oculto */
+            transition: background-color 0.3s;
+        }
+
+        .scroll-top:hover {
+            background-color: #555;
+        }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">STUDY HUB</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="material.html">Material de apoio</a></li>
+        <li><a href="planner.html">Planners</a></li>
+        <li><a href="app.html">Aplicativos</a></li>
+        <li><a href="video.html">Vídeos</a></li>
+        <li><a href="canais.html">Canais</a></li>
+        <li><a href="dicas1.html">Dicas</a></li>
+        <li><a href="etec.html">Etec em Ação</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <br><br><br>
+
+  
+
+  <!-- Container dos membros -->
+  <div class="team-container">
+    <!-- Integrante 1 -->
+    <div class="member">
+      <img src="imagens/luane.png" alt="Integrante 1">
+      <div class="member-info">
+        <h2>Luane Caroline da Silva</h2>
+        <p>Email: cluane269@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Integrante 2 -->
+    <div class="member">
+      <img src="imagens/milena.png" alt="Integrante 2">
+      <div class="member-info">
+        <h2>Milena Vaz de Abreu</h2>
+        <p>Email: vazs.milena@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Integrante 3 -->
+    <div class="member">
+      <img src="imagens/perola.png" alt="Integrante 3">
+      <div class="member-info">
+        <h2>Pérola Evellyn Daltro Figueiredo</h2>
+        <p>Email: perola.evell.f@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Integrante 4 -->
+    <div class="member">
+      <img src="imagens/teo.png" alt="Integrante 4">
+      <div class="member-info">
+        <h2>Samara Pereira da Silva</h2>
+        <p>Email: samarapereiradasilva758@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção de feedback -->
+  <section class="feedback-container">
+    <h2>Avalie o site</h2>
+    <label for="rating">Dê sua avaliação (0 a 10):</label>
+    <input type="range" id="rating" name="rating" min="0" max="10" step="1">
+    <label for="comment">Deixe seu comentário:</label>
+    <textarea id="comment" placeholder="Escreva seu comentário..."></textarea>
+    <button onclick="submitFeedback()">Enviar</button>
+
+    <div id="feedback-result" style="display:none;">
+      <p id="rating-result"></p>
+      <p id="comment-result"></p>
+    </div>
+  </section>
+
+  
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <footer>
+    <p>&copy; Study Hub 2024.
+        <br> Todos os direitos reservados para o grupo.
+        <br> Trabalho acadêmico sem fins lucrativos.</p>
+</footer>
+
+  <!-- Botão de Alternar Modo -->
+  <button class="toggle-btn" onclick="toggleMode()">Alterar Modo</button>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    function submitFeedback() {
+      const rating = document.getElementById('rating').value;
+      const comment = document.getElementById('comment').value;
+      document.getElementById('rating-result').textContent = `Você deu uma nota de: ${rating}/10`;
+      document.getElementById('comment-result').textContent = `Seu comentário: ${comment}`;
+      document.getElementById('feedback-result').style.display = 'block';
+    }
+  </script>
+
+<button class="scroll-top" id="scrollTopBtn">Voltar ao Topo</button>
+   <script>
+    // Obtenha o botão
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    // Mostre o botão quando a página for rolada para baixo
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopBtn.style.display = "block";
+        } else {
+            scrollTopBtn.style.display = "none";
+        }
+    };
+
+    // Quando o botão for clicado, role suavemente para o topo da página
+    scrollTopBtn.onclick = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+</script>
+
+</body>
+</html>
